@@ -1,0 +1,84 @@
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+
+
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--Dark-Blue);
+    color: white;
+    font-family: "Manrope", sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding-inline: 1rem;
+
+}
+
+.container {
+    position: relative;
+    background-color: var(--Dark-Grayish-Blue);
+    padding: 2.2rem .9rem 5rem;
+    max-width: 520px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 15px;
+}
+
+
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: var(--Neon-Green);
+    font-weight: 400;
+}
+
+q {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.8rem;
+    max-width: 416px;
+}
+
+.dice {
+    background-color: var(--Neon-Green);
+    padding: 1.2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: -10%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: box-shadow ease-in-out .2s;
+}
+
+.dice:hover {
+    box-shadow: 0 0 30px 10px hsl(150 100% 66% / .5);
+}
+
+.dice:active {
+    box-shadow: 0 0 30px 10px hsl(150 100% 66% / .5),
+        0 0 50px 20px hsl(150 100% 66% / .2);
+
+}
